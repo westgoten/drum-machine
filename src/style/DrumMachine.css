@@ -1,0 +1,8 @@
+.drum-machine {
+    border: 1px solid black;
+    background-color: beige;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}

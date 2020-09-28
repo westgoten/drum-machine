@@ -1,5 +1,6 @@
 import React from 'react'
 import DrumPad from './DrumPad'
+import '../style/DrumPadGrid.css'
 
 const NUMBER_OF_DRUM_PADS = 9
 
@@ -10,7 +11,7 @@ function DrumPadGrid(props) {
     }
 
     return (
-        <div id='drum-pad-grid'>
+        <div id='drum-pad-grid' className='drum-pad-grid'>
             {drumPads}
         </div>
     )

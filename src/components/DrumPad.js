@@ -1,8 +1,11 @@
 import React from 'react'
+import '../style/DrumPad.css'
 
 function DrumPad(props) {
     return (
-        <button id='drum-pad'>Button</button>
+        <div id='drum-pad' className='drum-pad'>
+            <span id='text'>Drum Pad</span>
+        </div>
     )
 }
 
