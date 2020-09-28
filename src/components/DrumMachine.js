@@ -5,7 +5,7 @@ import '../style/DrumMachine.css'
 
 function DrumMachine(props) {
     return (
-        <div id='drum-machine' className='drum-machine'>
+        <div id='drum-machine' className='main-container'>
             <DrumPadGrid />
             <Controls />
         </div>

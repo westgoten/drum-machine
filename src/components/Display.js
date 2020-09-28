@@ -1,10 +1,9 @@
 import React from 'react'
+import '../style/Display.css'
 
 function Display(props) {
     return (
-        <div id='display'>
-            
-        </div>
+        <p id='display' className='display'>Display</p>
     )
 }
 

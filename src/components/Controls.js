@@ -7,7 +7,7 @@ import '../style/Controls.css'
 
 function Controls(props) {
     return (
-        <div id='controls' className='controls'>
+        <div className='controls'>
             <PowerSwitch />
             <Display />
             <VolumeSlider />

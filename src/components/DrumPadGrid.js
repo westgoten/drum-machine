@@ -11,7 +11,7 @@ function DrumPadGrid(props) {
     }
 
     return (
-        <div id='drum-pad-grid' className='drum-pad-grid'>
+        <div className='drum-pad-grid'>
             {drumPads}
         </div>
     )

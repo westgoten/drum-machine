@@ -1,0 +1,9 @@
+.display {
+    background-color: grey;
+    display: inline-block;
+    width: 12em;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+}
