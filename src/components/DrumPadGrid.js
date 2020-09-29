@@ -1,6 +1,6 @@
 import React from 'react'
 import DrumPad from './DrumPad'
-import '../style/DrumPadGrid.css'
+import '../style/DrumPadGrid.scss'
 
 const NUMBER_OF_DRUM_PADS = 9
 

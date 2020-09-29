@@ -1,13 +1,13 @@
 import React from 'react'
-import '../style/switch.css'
+import '../style/InstrumentSwitch.scss'
 
 function InstrumentSwitch(props) {
     return (
-        <div className='container'>
-            <span className='label'>Instrument</span>
-            <label className='switch'>
-                <input type='checkbox' className='input'></input>
-                <span className='slider'></span>
+        <div className='switch-container'>
+            <span className='switch-label'>Instrument</span>
+            <label className='switch-switch'>
+                <input type='checkbox' className='switch-input'></input>
+                <span className='instrument-slider'></span>
             </label>
         </div>
     )

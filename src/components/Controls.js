@@ -3,7 +3,7 @@ import PowerSwitch from './PowerSwitch'
 import InstrumentSwitch from './InstrumentSwitch'
 import Display from './Display'
 import VolumeSlider from './VolumeSlider'
-import '../style/Controls.css'
+import '../style/Controls.scss'
 
 function Controls(props) {
     return (

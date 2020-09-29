@@ -1,6 +1,6 @@
 import React from 'react'
 import DrumMachine from './DrumMachine'
-import '../style/App.css'
+import '../style/App.scss'
 
 function App() {
   return (

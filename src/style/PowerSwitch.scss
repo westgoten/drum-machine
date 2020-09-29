@@ -1,0 +1,5 @@
+@import 'switch';
+
+.switch-input:checked + .switch-slider {
+    background-color: green;
+}

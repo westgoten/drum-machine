@@ -1,0 +1,10 @@
+@import 'switch';
+
+.instrument-slider {
+    @extend .switch-slider;
+    background-color: red;
+}
+
+.switch-input:checked + .instrument-slider {
+    background-color: blue;
+}

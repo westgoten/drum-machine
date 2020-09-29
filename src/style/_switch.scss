@@ -1,27 +1,27 @@
-.container {
+.switch-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.label {
+.switch-label {
     font-weight: bold;
 }
 
-.switch {
+.switch-switch {
     position: relative;
     display: inline-block;
     width: 3em;
     height: 1.5em;
 }
 
-.input {
+.switch-input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.slider {
+.switch-slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -32,7 +32,7 @@
     transition: background-color 0.4s;
 }
 
-.slider::before {
+.switch-slider::before {
     position: absolute;
     content: "";
     width: 1.1em;
@@ -43,10 +43,6 @@
     transition: transform 0.4s;
 }
 
-.input:checked + .slider {
-    background-color: blue;
-}
-
-input:checked + .slider::before {
+.switch-input:checked + .switch-slider::before {
     transform: translateX(calc(1.1em + 0.35em));
 }

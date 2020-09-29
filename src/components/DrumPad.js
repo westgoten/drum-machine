@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/DrumPad.css'
+import '../style/DrumPad.scss'
 
 function DrumPad(props) {
     return (

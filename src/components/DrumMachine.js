@@ -1,7 +1,7 @@
 import React from 'react'
 import DrumPadGrid from './DrumPadGrid'
 import Controls from './Controls'
-import '../style/DrumMachine.css'
+import '../style/DrumMachine.scss'
 
 function DrumMachine(props) {
     return (
