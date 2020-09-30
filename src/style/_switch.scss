@@ -1,3 +1,19 @@
+$switch-height: 24px;
+$switch-width: 48px;
+$switch-border-radius: $switch-width;
+
+$slider-padding: 7px;
+$slider-size: $switch-height - $slider-padding;
+$slider-pos: $slider-padding / 2;
+
+$switch-shadow-size: 1px;
+$switch-shadow-blur: 1px;
+$switch-shadow-color: rgba($color: #000000, $alpha: 0.2);
+
+@mixin box-shadow($shadow-size, $shadow-blur, $shadow-color) {
+    box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-blur $shadow-color;
+}
+
 .switch-container {
     display: flex;
     flex-direction: column;
@@ -11,8 +27,9 @@
 .switch-switch {
     position: relative;
     display: inline-block;
-    width: 3em;
-    height: 1.5em;
+    width: $switch-width;
+    height: $switch-height;
+    border-radius: $switch-border-radius;
 }
 
 .switch-input {
@@ -22,6 +39,7 @@
 }
 
 .switch-slider {
+    @include box-shadow($switch-shadow-size, $switch-shadow-blur, $switch-shadow-color);
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -29,20 +47,23 @@
     bottom: 0;
     right: 0;
     background-color: grey;
+    border-radius: $switch-border-radius;
     transition: background-color 0.4s;
 }
 
 .switch-slider::before {
+    @include box-shadow($switch-shadow-size, $switch-shadow-blur, $switch-shadow-color);
     position: absolute;
     content: "";
-    width: 1.1em;
-    height: 1.1em;
-    top: 0.2em;
-    left: 0.2em;
+    width: $slider-size;
+    height: $slider-size;
+    top: $slider-pos;
+    left: $slider-pos;
     background-color: white;
+    border-radius: $switch-border-radius;
     transition: transform 0.4s;
 }
 
 .switch-input:checked + .switch-slider::before {
-    transform: translateX(calc(1.1em + 0.35em));
+    transform: translateX($slider-size + (2 * $slider-pos));
 }
