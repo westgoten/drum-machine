@@ -16,7 +16,7 @@ $track-shadow-size: 1px;
 $track-shadow-blur: 1px;
 $track-shadow-color: rgba(0, 0, 0, .2);
 $track-border-width: 2px;
-$track-border-color: #cfd8dc;
+$track-border-color: white;
 
 $track-radius: 5px;
 $contrast: 5%;
@@ -135,4 +135,8 @@ input[type='range'] {
       cursor: not-allowed;
     }
   }
+}
+
+.slider-container {
+  width: 85%;
 }

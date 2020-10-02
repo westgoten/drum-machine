@@ -1,5 +1,10 @@
 @import 'switch';
 
+.power-container {
+    @extend .switch-container;
+    margin: 10px 0 20px 0;
+}
+
 .switch-input:checked + .switch-slider {
-    background-color: green;
+    background-color: #007a00;
 }

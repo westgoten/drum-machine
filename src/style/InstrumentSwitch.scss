@@ -2,9 +2,9 @@
 
 .instrument-slider {
     @extend .switch-slider;
-    background-color: red;
+    background-color: #0050ff;
 }
 
 .switch-input:checked + .instrument-slider {
-    background-color: blue;
+    background-color: #6700ff;
 }

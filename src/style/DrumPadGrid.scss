@@ -1,7 +1,9 @@
 .drum-pad-grid {
-    background-color: blueviolet;
     display: flex;
     width: 50%;
-    height: 100%;
+    max-width: 50%;
+    max-height: 100%;
     flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 10px;
 }

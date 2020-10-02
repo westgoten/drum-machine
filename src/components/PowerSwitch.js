@@ -3,7 +3,7 @@ import '../style/PowerSwitch.scss'
 
 function PowerSwitch(props) {
     return (
-        <div className='switch-container'>
+        <div className='power-container'>
             <span className='switch-label'>Power</span>
             <label className='switch-switch'>
                 <input type='checkbox' className='switch-input'></input>
