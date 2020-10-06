@@ -3,8 +3,9 @@ import '../style/DrumPad.scss'
 
 function DrumPad(props) {
     return (
-        <div className='drum-pad'>
-            <span>Drum Pad</span>
+        <div id='drum-pad' className='drum-pad'>
+            <span className='text'>{props.text}</span>
+            <audio id={props.text} className='clip' src=''></audio>
         </div>
     )
 }

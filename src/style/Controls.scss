@@ -9,9 +9,9 @@
     align-items: center;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width) and (orientation: portrait) {
     .controls {
-        width: 55%;
-        max-width: 55%;
+        width: 65%;
+        max-width: 65%;
     }
 }

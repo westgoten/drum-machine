@@ -11,9 +11,9 @@
     padding: 18px 10px;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width) and (orientation: portrait) {
     .main-container {
-        width: 30rem;
+        width: 24rem;
         height: 40rem;
         flex-direction: column;
     }

@@ -9,8 +9,14 @@
     background-color: #007a00;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width) and (orientation: portrait) {
     .power-container {
         margin: 20px 0 5px 0;
+    }
+}
+
+@media (max-width: $tablet-width) and (orientation: landscape) {
+    .power-container {
+        margin: 0 0 5px 0 ;
     }
 }
