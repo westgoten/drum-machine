@@ -1,3 +1,5 @@
+@import 'globalVariables';
+
 $switch-height: 24px;
 $switch-width: 48px;
 $switch-border-radius: $switch-width;
@@ -67,4 +69,10 @@ $switch-shadow-color: rgba($color: #000000, $alpha: 0.2);
 
 .switch-input:checked + .switch-slider::before {
     transform: translateX($slider-size + (2 * $slider-pos));
+}
+
+@media (max-width: $tablet-width) {
+    .switch-container {
+        margin: 10px 0 0 0;
+    }
 }

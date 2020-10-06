@@ -1,4 +1,4 @@
-@import 'switch';
+@import 'switch', 'globalVariables';
 
 .power-container {
     @extend .switch-container;
@@ -7,4 +7,10 @@
 
 .switch-input:checked + .switch-slider {
     background-color: #007a00;
+}
+
+@media (max-width: $tablet-width) {
+    .power-container {
+        margin: 20px 0 5px 0;
+    }
 }

@@ -1,3 +1,9 @@
+@import 'globalVariables';
+
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,4 +11,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: $tablet-width) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: $phone-width) {
+  html {
+    font-size: 9.5px;
+  }
 }

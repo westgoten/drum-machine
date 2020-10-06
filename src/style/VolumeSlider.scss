@@ -1,3 +1,5 @@
+@import 'globalVariables';
+
 $track-color: #727272;
 $thumb-color: #00aaff;
 
@@ -139,4 +141,10 @@ input[type='range'] {
 
 .slider-container {
   width: 85%;
+}
+
+@media (max-width: $tablet-width) {
+  input[type='range'] {
+    margin: 7px 0;
+  }
 }
