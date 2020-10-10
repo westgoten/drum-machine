@@ -11,6 +11,13 @@
     cursor: pointer;
 }
 
+.drum-pad-pressed {
+    @extend .drum-pad;
+    box-shadow: none;
+    background-color: orange;
+    padding-top: 10px;
+}
+
 .text {
     font-size: 1.3em;
 }
