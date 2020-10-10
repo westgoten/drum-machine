@@ -1,13 +1,22 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../style/DrumPad.scss'
 
 const DRUM_PAD_IDLE = 'drum-pad'
 const DRUM_PAD_PRESSED = 'drum-pad-pressed'
 
 function DrumPad(props) {
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress)
+        return () => document.removeEventListener('keydown', handleKeyPress)
+    })
+
+    function handleKeyPress(event) {
+        if (event.key.toLowerCase() === props.text.toLowerCase() && !event.repeat)
+            play()
+    }
+
     const [drumPadClass, setDrumPadClass] = useState(DRUM_PAD_IDLE)
     const [timeoutId, setTimeoutId] = useState(-1)
-
     const audio = useRef(null)
     function play() {
         const audioNode = audio.current
