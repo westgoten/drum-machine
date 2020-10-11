@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { connect } from 'react-redux'
+import { changeSound } from '../actions/creators'
 import '../style/DrumPad.scss'
 
+// TO DO: Move constants to another file
 const DRUM_PAD_IDLE = 'drum-pad'
 const DRUM_PAD_PRESSED = 'drum-pad-pressed'
 
@@ -19,6 +22,7 @@ function DrumPad(props) {
     const [timeoutId, setTimeoutId] = useState(-1)
     const audio = useRef(null)
     function play() {
+        props.changeSound(props.text) // TO DO: The argument should be the sound's name
         const audioNode = audio.current
         audioNode.currentTime = 0
         audioNode.play()
@@ -42,6 +46,10 @@ function DrumPad(props) {
         setTimeoutId(id)
     }
 
+    useEffect(() => {
+        audio.current.volume = props.currentVolume / 100
+    })
+
     return (
         <div id='drum-pad' className={drumPadClass} onClick={play}>
             <span className='text'>{props.text}</span>
@@ -50,4 +58,13 @@ function DrumPad(props) {
     )
 }
 
-export default DrumPad
+function mapStateToProps(state) {
+    return {
+        isPowerOn: state.isPowerOn,
+        currentVolume: state.currentVolume
+    }
+}
+
+const mapDispatchToProps = { changeSound }
+
+export default connect(mapStateToProps, mapDispatchToProps)(DrumPad)
