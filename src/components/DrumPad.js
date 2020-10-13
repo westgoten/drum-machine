@@ -5,7 +5,8 @@ import '../style/DrumPad.scss'
 
 // TO DO: Move constants to another file
 const DRUM_PAD_IDLE = 'drum-pad'
-const DRUM_PAD_PRESSED = 'drum-pad-pressed'
+const DRUM_PAD_ACTIVE = 'drum-pad-active'
+const DRUM_PAD_INACTIVE = 'drum-pad-inactive'
 
 function DrumPad(props) {
     useEffect(() => {
@@ -22,16 +23,21 @@ function DrumPad(props) {
     const [timeoutId, setTimeoutId] = useState(-1)
     const audio = useRef(null)
     function play() {
-        props.changeSound(props.text) // TO DO: The argument should be the sound's name
-        const audioNode = audio.current
-        audioNode.currentTime = 0
-        audioNode.play()
+        if (props.isPowerOn) {
+            props.changeSound(props.text) // TO DO: The argument should be the sound's name
+            const audioNode = audio.current
+            audioNode.currentTime = 0
+            audioNode.play()
+        }
         animateDrumPad()
     }
 
     function animateDrumPad() {
         if (drumPadClass === DRUM_PAD_IDLE) {
-            setDrumPadClass(DRUM_PAD_PRESSED)
+            if (props.isPowerOn)
+                setDrumPadClass(DRUM_PAD_ACTIVE)
+            else
+                setDrumPadClass(DRUM_PAD_INACTIVE)
             resetAnimation()
         } else {
             clearTimeout(timeoutId)
@@ -47,7 +53,10 @@ function DrumPad(props) {
     }
 
     useEffect(() => {
-        audio.current.volume = props.currentVolume / 100
+        const audioNode = audio.current
+        audioNode.volume = props.currentVolume / 100
+        if (!props.isPowerOn)
+            audioNode.pause()
     })
 
     return (

@@ -1,14 +1,15 @@
 import { createReducer } from '@reduxjs/toolkit'
 import * as types from '../actions/types'
+import { HEATER_KIT } from '../utils/consts/instrumentKits'
 
 const initialState = {
     isPowerOn: true,
     currentSound: '',
     currentVolume: 50,
-    currentInstrumentKit: ''
+    currentInstrumentKit: HEATER_KIT
 }
 
-// TO DO: Break this reducer down to many small reducers
+// TO DO: Break this reducer down in many small reducers
 export const drumMachineReducer = createReducer(initialState, {
     [types.CHANGE_SOUND]: (state, action) => { state.currentSound = action.payload },
     [types.CHANGE_VOLUME]: (state, action) => { state.currentVolume = action.payload },
