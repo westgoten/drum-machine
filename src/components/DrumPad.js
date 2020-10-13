@@ -24,7 +24,7 @@ function DrumPad(props) {
     const audio = useRef(null)
     function play() {
         if (props.isPowerOn) {
-            props.changeSound(props.text) // TO DO: The argument should be the sound's name
+            props.changeSound(props.sound.name)
             const audioNode = audio.current
             audioNode.currentTime = 0
             audioNode.play()
@@ -62,7 +62,7 @@ function DrumPad(props) {
     return (
         <div id='drum-pad' className={drumPadClass} onClick={play}>
             <span className='text'>{props.text}</span>
-            <audio id={props.text} className='clip' ref={audio} src='https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3'></audio>
+            <audio id={props.text} className='clip' ref={audio} src={props.sound.src}></audio>
         </div>
     )
 }
