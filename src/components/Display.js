@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import '../style/Display.scss'
 
 function Display(props) {
@@ -7,4 +8,8 @@ function Display(props) {
     )
 }
 
-export default Display
+function mapStateToProps(state) {
+    return Object.assign({}, state)
+}
+
+export default connect(mapStateToProps)(Display)

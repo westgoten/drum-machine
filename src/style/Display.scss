@@ -1,13 +1,14 @@
 .display {
     background-color: grey;
     display: inline-block;
-    width: 12rem;
+    min-width: 12rem;
+    min-height: 1rem;
     overflow-wrap: break-word;
     font-weight: bold;
     font-size: 1.1em;
     text-align: center;
-    padding: 1rem 0;
     border-radius: 4px;
+    padding: 1rem 0;
     margin: 10px 0;
     box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.2), 0 0 2px rgba($color: #000000, $alpha: 0.2);
 }

@@ -1,12 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { connect } from 'react-redux'
 import { changeSound } from '../actions/creators'
+import { DRUM_PAD_IDLE, DRUM_PAD_ACTIVE, DRUM_PAD_INACTIVE } from '../utils/consts/drumPad'
 import '../style/DrumPad.scss'
-
-// TO DO: Move constants to another file
-const DRUM_PAD_IDLE = 'drum-pad'
-const DRUM_PAD_ACTIVE = 'drum-pad-active'
-const DRUM_PAD_INACTIVE = 'drum-pad-inactive'
 
 function DrumPad(props) {
     useEffect(() => {
