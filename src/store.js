@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { drumMachineReducer } from './reducers/reducers'
+import drumMachineReducer from './reducers/drumMachineReducer'
 
 const store = configureStore({ reducer: drumMachineReducer })
 

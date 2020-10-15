@@ -10,8 +10,7 @@ const initialState = {
     currentInstrumentKit: HEATER_KIT
 }
 
-// TO DO: Break this reducer down in many small reducers
-export const drumMachineReducer = createReducer(initialState, {
+const drumMachineReducer = createReducer(initialState, {
     [types.CHANGE_SOUND]: (state, action) => {
         state.currentSound = action.payload
         state.displayContent = action.payload
@@ -29,3 +28,5 @@ export const drumMachineReducer = createReducer(initialState, {
         state.displayContent = ''
     }
 }, [], (state) => Object.assign({}, state))
+
+export default drumMachineReducer

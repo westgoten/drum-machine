@@ -33,6 +33,7 @@ $switch-shadow-color: rgba($color: #000000, $alpha: 0.2);
     width: $switch-width;
     height: $switch-height;
     border-radius: $switch-border-radius;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .switch-input {
