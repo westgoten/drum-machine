@@ -4,12 +4,14 @@ import '../style/Display.scss'
 
 function Display(props) {
     return (
-        <p id='display' className='display'>Display</p>
+        <p id='display' className='display'>{props.displayContent}</p>
     )
 }
 
 function mapStateToProps(state) {
-    return Object.assign({}, state)
+    return {
+        displayContent: state.displayContent
+    }
 }
 
 export default connect(mapStateToProps)(Display)
